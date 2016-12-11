@@ -1,0 +1,1 @@
+对于输出格式说明符，只适用于配置项 FORMAT；而时间格式说明符，不仅适用于配置项 FORMAT，同样还适用于配置项 FILENAME。这一点，通过查看 Easylogging++ 的源码也可以得到证实。当然，如果我们想要让配置项 FILENAME 也能够使用输出格式说明符，可以通过修改源码去实现。建议有兴趣的小伙伴参考一下函数 updateFormatSpec() ，然后在函数 resolveFilename() 中修改即可。
